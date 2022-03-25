@@ -1,0 +1,524 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.hero{
+  text-align: center;
+  margin-top: 10px;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.logo{
+}
+.cart{
+  cursor: pointer;
+  background-image: url(../img/cart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #767272;
+  border-radius: 50%;
+  background-color: white;
+}
+.banner{
+  position: absolute;
+  background-image: url(../img/banner.jpg);
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: center;
+  width: 100%;
+  height: 520px;
+
+}
+.bannerHolder{
+  height: 520px;
+}
+.title{
+  text-align: center;
+  margin: 180px auto 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 84px;
+  color: #FFFFFF;
+}
+.addToCart{
+  margin-top: 25px;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  border: 0;
+  background: #0E49B5;
+  border-radius: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+.searchBar{
+  display: flex;
+  width: 100%;
+  max-width: 1024px;
+  margin: 35px auto;
+  height: 60px;
+  background: #FFFFFF;
+  border: 1px solid #DDDADA;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 0 0 0 20px;
+}
+.filterSearchButton{
+  display: inline;
+  cursor: pointer;
+  height: 100%;
+  width: 24px;
+  border: 0;
+  background-image: url(../img/searchButton.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+
+}
+.search{
+  cursor: text;
+  margin-left: 10px;
+  height: 100%;
+  border: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  width: 100%;
+}
+.search:focus { 
+  outline: none; 
+}
+.filterButton{
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-image: url(../img/filterButton.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  margin-right: 12px;
+}
+.filterButtonChecked{
+  background-image: url(../img/checkedFilterButton.svg);
+}
+.sortButton{
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-image: url(../img/sortButton.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+.checkedSortButton{
+  background-image: url(../img/checkedSortButton.svg);
+}
+.buttonsWrapper{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  margin: auto 9px auto 4px;
+}
+.items{
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.itemsWrapper{
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1024px;
+
+}
+.itemsWrapperFiltered{
+  max-width: 720px;
+}
+.card{
+  width: 300px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.card .addToCart{
+  margin: 0 auto;
+}
+.productImg{
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 200px;
+}
+.productTitle{
+  margin-top: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+.inStock{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #767272;
+  margin: 8px;
+}
+.inStockImg{
+  height: 15px;
+  width: 15px;
+  margin: 0 3px -3px 0;
+}
+.closeStockImg{
+  height: 18px;
+  width: 18px;
+}
+.disabledButton{
+  margin: 10px auto 10px auto;
+  background: #DDDDDD;
+  cursor: default;
+}
+.stats{
+  display: flex;
+  width: 300px;
+  height: 86px;
+  background: #DAE2EA;
+  border-radius: 0px 0px 10px 10px;
+  margin: 20px 0 0 0;
+  padding-top: 20px;
+}
+.productInfo{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #3B3E66;
+  text-align: left;
+}
+.likeReview{
+  width: 20px;
+  height: 20px;
+  margin-left: 7px;
+  display: inline-block;
+
+}
+.cardBottom{
+  margin-left: 10px;
+  display: inline-block;
+}
+.boldNumbers{
+  font-weight: bold;
+}
+.filterModal{
+  height: 108px;
+  width: 287px;
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+  right: 14px;
+  top: -28px;
+  border: 1px solid #E2E2E2;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 14px 0 0 0;
+}
+.categoryFilterWrapper{
+  margin-left: 18px;
+  display: grid;
+  grid-template-columns: 150px 100px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #0E49B5;
+}
+.categoryFilter{
+  width: 88px;
+  height: 26px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: black;
+  padding: 5px 0 5px 6px;
+  margin: 15px 0 0 0;
+}
+.categoryFilterFooter{
+  width: 100%;
+height: 30px;
+background: #EDF3FF;
+border-radius: 0px 0px 5px 5px;
+margin: 7.5px 0 0 0;
+display: flex;
+align-items: center;
+}
+.filerRersultsButton{
+  width: 84px;
+  height: 19px;
+  background: #0E49B5;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top:2px ;
+  border: 0;
+  margin: 0 auto;
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: -9px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  background-color: transparent;
+  border: 0;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 18px;
+  content: ' ';
+  height: 15px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+.sortModal{
+  position: absolute;
+  width: 162px;
+  height: 154px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  z-index: 2;
+  right: 0;
+  top: -28px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+.orderTitle{
+  margin: 12px 120px 15px 12px;
+  color: #0E49B5;
+}
+.orderButton{
+  display: block;
+  width: 139px;
+  height: 24px;
+  border-radius: 15px;
+  background-color: white;
+  border: 0;
+  margin: 0 auto 12px;
+}
+.orderButtonWrapper{
+  position: relative;
+}
+#descendingButton .smallArrow{
+  bottom: 5px;
+  left: -14px;
+}
+.orderButtonChecked{
+background: #EDF3FF;
+}
+.filters{
+  width: 322px;
+  display: inline-block;
+  border: 1px solid #DDDADA;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-right: 35px;
+}
+.filterTitle{
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+height: 50px;
+padding: 17px 10px 9px 30px;
+border-bottom: 0.5px solid #DDDDDD;
+display: flex;
+justify-content: space-between;
+width: 321px;
+}
+.priceSettings{
+  padding: 23px 28px 33px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-bottom: 0.5px solid #DDDDDD;
+}
+.settingText{
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+}
+.priceSettings .settingText{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputPrice{
+  width: 170px;
+  height: 39px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.filterSettings{
+  padding: 24px 117px 20px 30px;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  border-bottom: 0.5px solid #DDDDDD;
+}
+.filterCheckboxWrapper{
+  display: inline-flex;
+  margin: 0 0 17px 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.filterCheckbox{
+  width: 15px;
+  height: 15px;
+  margin: 0 14px 0 0;
+}
+.OS .filterSettings{
+  grid-template-columns: 100px;
+}
+.display .filterSettings{
+  grid-template-columns: 150px;
+}
+.arrow {
+   display: block;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    margin: 0 20px;
+    width: 10px;
+    height: 10px;
+    padding: 3px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.smallArrow {
+  position: absolute;
+  left: -13px;
+   display: block;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    margin: 0 20px;
+    width: 5px;
+    height: 5px;
+    padding: 3px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    margin-top: 5px;
+}
+.displayNone{
+  display: none;
+}

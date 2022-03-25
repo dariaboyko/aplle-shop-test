@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="header">
+        <img class= "logo" src="./img/logo.svg">
+        <button class="cart"></button>
+      </div>
+      <div class="bannerHolder">
+        <div class="banner">
+          <h1 class="title">IPad Air</h1>
+          <button class="addToCart">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div id="searchBar">
+    <div class="searchBar">
+      <button type="submit" class="filterSearchButton" ></button>
+      <input class="search" type="text" name="device" id="searchedDevice" placeholder="Enter device name...">
+      <div class="buttonsWrapper">
+        <button class="filterButton" id="sideFiltersButton"></button>
+        <button class="sortButton" id="sortButton"></button>
+      </div>
+    </div>
+    <div class="items">
+      <div class="filterModal displayNone" id="filterModal">
+        <button class="close"></button>
+        <div class="categoryFilterWrapper">
+          <span>Category</span>
+          <span>Stock</span>
+          <div class="categoryFilter">All categories</div>
+          <div class="categoryFilter">Any</div>
+        </div>
+        <div class="categoryFilterFooter">
+          <button class="filerRersultsButton">Filter results</button>
+        </div>
+      </div>
+      <div class="sortModal displayNone" id="sortModal">
+        <button class="close"></button>
+        <div class="orderTitle">Order</div>
+        <form>
+          <button class="orderButton orderButtonChecked" id="defaultButton">Default</button>
+          <button class="orderButton " id ="ascendingButton"><div class="orderButtonWrapper"><span class="smallArrow up"></span><span>Ascending</span></button>
+          <button class="orderButton" id="descendingButton"><div class="orderButtonWrapper"><span class="smallArrow down"></span><span>Descending</span></button>
+        </form>
+      </div>
+      <div class="filters displayNone" id="sideFiters">
+        <div class="price">
+          <div class="filterTitle">Price<button class="price arrow down"> </button></div>
+          <div class="price filterWrapper">
+            <div class="priceSettings">
+              <div class="settingText">From<input type="number" class="inputPrice" name="startingPrice" id="startingPrice"/></div>
+              <div class="settingText">To<input type="number" class="inputPrice" name="endingPrice" id="endingPrice"/></div>
+            </div>
+          </div>
+      <div class="color">
+          <div class="filterTitle">Color <button class="color arrow down"> </button></div>
+          <div class="color filterWrapper">
+          <div class="filterSettings">
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="color" value="Red">Red
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="color" value="Green">Green
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="color" value="Black">Black
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="color" value="White">White
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="color" value="Blue">Blue
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="color" value="Grey">Grey
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="color" value="Gold">Gold
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="color" value="Yellow">Yellow
+            </label>
+          </div>
+        </div>
+        </div>
+        <div class="memory">
+          <div class="filterTitle">Memory <button class="memory arrow down"> </button> </div>
+          <div class="memory filterWrapper">
+          <div class="filterSettings">
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="memory" value="32">32 Gb
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="memory" value="512">512 Gb
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="memory" value="64">64 Gb
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="memory" value="1024">1 TB
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="memory" value="128">128 Gb
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="memory" value="2048">2 TB
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="memory" value="256">256 GB
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="memory" value="4096">4 TB
+            </label>
+          </div>
+        </div>
+        </div>
+        <div class="OS">
+          <div class="filterTitle">OS <button class="OS arrow down" > </button></div>
+          <div class="OS filterWrapper">
+          <div class="filterSettings">
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="OS" value="IOS">IOS
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="OS" value="macOS">Mac OS
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="OS" value="tvOS">tvOS
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="OS" value="watchOS">Watch  OS
+            </label>
+          </div>
+        </div>
+          </div>
+        <div class="display">
+          <div class="filterTitle">Display <button class="display arrow down"> </button></div>
+          <div class="display filterWrapper">
+          <div class="filterSettings">
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="display" min="2" max="5">2 - 5 inch
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="display" min="5" max="7">5 - 7 inch
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="display" min="7" max="12">7 - 12 inch
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="display" min="12" max="16">12 - 16 inch
+            </label>
+            <label class="filterCheckboxWrapper">
+              <span class="checkmark"></span>
+              <input class="filterCheckbox" type="checkbox" name="display" min="16" max="100">+16 inch
+            </label>
+          </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      <div class="itemsWrapper" id="items"></div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
