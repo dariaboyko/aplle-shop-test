@@ -523,3 +523,13 @@ line-height: 16px;
 .displayNone{
   display: none;
 }
+@media only screen
+and (min-width: 0)
+and (max-width: 650px){
+  .items{
+    flex-direction: column;
+  }
+  .filters{
+    margin: 0 auto;
+  }
+}
