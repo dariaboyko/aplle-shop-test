@@ -7,13 +7,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body class="page">
     <div class="hero">
       <div class="header">
         <img class= "logo" src="./img/logo.svg">
-        <button class="cart"></button>
+        <button class="cart" id="cart"></button>
+        <div class="cartWrapper displayNone" id="cartWrapper">
+          <p class="productTitle">Shopping Cart</p>
+          <p class="cartSubTitle">Checkout is almost done!</p>
+          <div id="cartItems"></div>
+          <div class="cartBottom">
+            <p>Total amount: <span class="boldNumbers" id="totalAmount">0 ptc.</span></p>
+            <p>Total price: <span class="boldNumbers" id="totalPrice">0$</span></p>
+          </div>
+          <div class="buyWrapper">
+            <button class="buyButton">Buy</button>
+          </div>
+        </div>
       </div>
       <div class="bannerHolder">
         <div class="banner">
@@ -58,8 +71,8 @@
           <div class="filterTitle">Price<button class="price arrow down"> </button></div>
           <div class="price filterWrapper">
             <div class="priceSettings">
-              <div class="settingText">From<input type="number" class="inputPrice" name="startingPrice" id="startingPrice"/></div>
-              <div class="settingText">To<input type="number" class="inputPrice" name="endingPrice" id="endingPrice"/></div>
+              <div class="settingText">From<input type="number" class="inputPrice" name="startingPrice" id="startingPrice"  /></div>
+              <div class="settingText">To<input type="number" class="inputPrice" name="endingPrice" id="endingPrice" /></div>
             </div>
           </div>
       <div class="color">
@@ -192,8 +205,11 @@
         </div>
         </div>
         </div>
-      <div class="itemsWrapper" id="items"></div>
+      <div class="itemsWrapper" id="items">Loading...</div>
     </div>
+    </div>
+        <div class="itemInfoWindowWrapper displayNone " id="itemInfoWindowWrapper" ></div>
+        <div class="itemInfoWindow displayNone" id="itemInfoWindow" ></div>
     <script src="./js/script.js"></script>
   </body>
 </html>
